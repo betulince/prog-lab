@@ -19,7 +19,7 @@ def power(a,b):
     if b==1:
         return a
     if b>1:
-        return power(a,b-1)*a #power(a*a,b/2) de ayni islemi ifade ediyor.
+        return power(a,b-1)*a #power(a*a,b/2)
 
 
 #3:use a for loop to create a power function
