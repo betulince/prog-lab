@@ -17,40 +17,48 @@ def get_hist(my_list):
     return my_hist
 list_1=get_words()
 a=get_hist(list_1)
-print(a)
-kelime=input("lütfen string giriniz!= ")
-def sonInputaGit(kelime):   
-    kelimeler=kelime.split()
-    n=len(kelimeler)
-    if n>=5:
-        return "kelime sayısı beşten fazla olamaz"
-    else:
-        return kelimeler[-1]
-def inout_output(in_1,out):
-    inputs=open("input.txt","w")
-    inputs.write(in_1)
-    inputs.write("\n")
+#print(a)
+def read_input():
+    with open("input.txt", "r", encoding="utf-8") as file:
+        new_input = file.read()
+        words = new_input.split("\n")
+    return words
+def len_control():
+    last_word =list()
+    input1 = read_input()
+    for i in input1:
+        i=i.split()
+        if len(i)>5:
+            last_word.append("error")
+        else:
+            last_word.append(i[-1])
+    return last_word
+print(len_control())
+def after_word():
     output=open("output.txt","w")
-    output.write(in_1+"-"+out)
-    output.write("\n")
-    inputs.close()
-    output.close()
-def nextword():
-    nextList=list()
-    sonkelime=sonInputaGit(kelime)
-    for kelime_1 in list_1:
-        if kelime_1==sonkelime:
-            index=list_1.index(kelime_1)
-            sonrakiKelime=list_1[index+1]
-            nextList.append(sonrakiKelime)
-            list_1.remove(kelime_1)
-    return nextList
-sonrakiKelimeListesi=nextword()
-maxValue=0
-print(sonrakiKelimeListesi)
-for i in sonrakiKelimeListesi:
-    if maxValue<a[i]:
-        maxValue=a[i]
-        onerilecekKelime=i
-print(onerilecekKelime)
-inout_output(kelime,onerilecekKelime)
+    for last_word in len_control():
+        after_word = {}
+        if last_word=="error":
+            output.write(last_word+" - ")
+        else:
+            output.write(last_word+" - ")
+        for word in list_1:
+            if word==last_word:
+                index = list_1.index(word)
+                sonrakiKelime = list_1[index + 1]
+                list_1.remove(word)
+                if sonrakiKelime in after_word:
+                    after_word[sonrakiKelime] = after_word[sonrakiKelime] + 1
+                else:
+                    after_word[sonrakiKelime] = 1
+        maxValue=0
+        for i in after_word:
+            print(after_word)
+            if maxValue < after_word[i]:
+                maxValue=after_word[i]
+                onerilecekKelime=i
+        if last_word!="error":
+            output.write(onerilecekKelime)
+            output.write("\n")
+    return after_word
+after_word()
