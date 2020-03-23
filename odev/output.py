@@ -1,0 +1,13 @@
+bir - erkek
+Türk - edebiyatına
+ama - unutmayalım
+her - gün
+tüm - güzelliğiyle
+okuduğunu - söyledi.
+olumlu - tavırdan
+yöresel - kıyafetli
+Adalet - Ağaoğlu
+olayını - anımsatmak
+100 - Ressamı.
+Yılın - telif
+NACİ’NİN - ANISINA
