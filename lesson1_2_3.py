@@ -1,6 +1,5 @@
 """
-subject:
-1.generate list with n items
+generate list with n items
 
 """
 import random
@@ -176,4 +175,27 @@ my_list_8=my_bubble_sort(my_list_7)
 print("sıralı liste ",my_list_8)
 print(my_binary_search(my_list_8,3))
 
+print("median of a list")
+
+size = input("dizi boyutunu giriniz:")
+size = int(size)  # convert to str to int
+
+my_list_5 = get_n_random_numbers(size, -100, 100)
+
+
+# print("liste:",my_list_5)
+
+def my_median(my_list_5):
+    my_list_6 = my_bubble_sort(my_list_5)
+    print(my_list_6)
+    n = len(my_list_6)
+    if (n % 2 == 1):
+        middle = int(n / 2) + 1
+        median = my_list_6[middle - 1]
+    else:
+        middle_1 = int(n / 2) - 1
+        middle_2 = middle_1 + 1
+        median = (my_list_5[middle_1] + my_list_5[middle_2]) / 2
+    return median
+print("medyan degeri:", my_median(my_list_5))
 
