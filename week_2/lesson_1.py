@@ -1,4 +1,4 @@
-from sympy import Symbol,pprint,init_printing
+from sympy import Symbol,pprint
 from sympy import factor,expand
 
 print("Symbol example: ")
