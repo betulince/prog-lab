@@ -1,6 +1,7 @@
 from sympy import Symbol,pprint,init_printing
 from sympy import factor,expand
 
+#Symbol
 print("Symbol example: ")
 x = Symbol('x')
 y = Symbol('y')
@@ -9,6 +10,7 @@ print(p)
 p = (x + 2)*(x + 3)
 print(p)
 
+#expand() and factor()
 print("expand() and factor() examples: ")
 expr = x**2 - y**2
 print("factor: "+str(factor(expr)))
@@ -24,7 +26,7 @@ expr = x**2 + 2*x*y + y**2
 pprint(expr)
 pprint(factors)
 
-#printing a Series
+#Printing a Series
 x = Symbol('x')
 series = x
 n = 5
@@ -32,7 +34,7 @@ for i in range(2,n+1):
     series = series + (x**i)/i
 pprint(series)
 
-#Substituting in Values:
+#Substituting in Values
 expr = x*x + x*y + x*y + y*y
 res = expr.subs({x:1,y:2})
 print(res)
