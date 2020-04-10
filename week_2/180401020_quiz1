@@ -1,0 +1,29 @@
+SymPy 
+
+SymPy : SymPy, matematiksel ifadeleri semboller cinsinden ifade edebileceğimiz ve değerlendirebileceğimiz programlar yazmamızı sağlar. 
+
+from sympy import Symbol : Programımızda bir sembol kullanmak için bu şekilde sembol sınıfının bir nesnesini oluşturmamız gerekir. 
+
+from sympy import pprint : Yazacağımız ifadeyi matematiksel ifade şekline en yakın şekilde yazmayı sağlayan pprint(pretty printing)’i import eder. 
+
+import matplotlib :  grafik ve veri görselleştirme kütüphanesini(matplotlib),import etmeyi sağlar. 
+
+factor() : sympy.factor () yöntemini kullanarak matematiksel ifadeleri çarpanlarına ayırabiliriz. 
+
+expand() : sympy.expand () yöntemini kullanarak matematiksel ifadeleri değişken biçiminde genişletebiliriz. 
+
+f.subs() : sympy.subs () yöntemi yardımıyla, matematiksel bir ifadedeki bir değişkenin veya ifadenin tüm örneklerini başka bir değişken,ifade veya değerle değiştirebiliriz. 
+
+pprint : pprint modülü rastgele Python veri yapılarını yorumlayıcıya girdi olarak kullanılabilecek bir biçimde güzel yazdırmak için bir olanak sağlar. 
+
+exp() : e^y’yi hesaplamak için kullanılır. 
+
+evalf() : sympy.evalf () yöntemi ile matematiksel ifadeleri değerlendirebiliriz. 
+
+plot() : grafik çizimini sağlar. 
+
+show() : çizim gösterimini sağlar. 
+
+                                                                                  Betül İNCE - 180401020 
+
+                                                                                                             
