@@ -65,5 +65,5 @@ print("Medyan:")
 print(get_median(list_of_values))
 
 with open(sys.argv[2]+'/180401020_hw_2_output.txt','w') as dosya:
-    dosya.write("aritmetik ortalama : "+" "+str(get_mean(list_of_values)))
+    dosya.write("aritmetik ortalama : "+" "+str(get_mean(list_of_values))+"\n")
     dosya.write("medyan : "+" "+str(get_median(list_of_values)))
