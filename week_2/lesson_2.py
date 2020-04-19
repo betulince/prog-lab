@@ -2,7 +2,7 @@ import sympy as sym
 from sympy import Symbol
 from sympy import pprint
 import sympy.plotting as syp
-
+import matplotlib.pyplot as plt
 
 sigma = Symbol('sigma')
 x = Symbol('x')
