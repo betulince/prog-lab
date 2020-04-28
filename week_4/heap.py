@@ -21,9 +21,9 @@ def heap_sort(array):
     array = array.copy() #copy() fonksiyonunu kullanarak yeni bir dizi ürettiğimde ve üzerinde değişiklikler yaptığımda orijinal dizi üzerinde bir değişiklik gerçekleşmez.
     build_min_heap(array)
     sorted_array = [] #aldığım sayıları atacağım diziyi oluşturdum.dizi boşsa append() kullanılamaz.
-    for _ in range(len(array)): #kullanmadığı değişkene _ ismini veriyor.(fo içinde i kullanımı olmadığı için)
-        array[0] , array[-1] = array[-1] , array[0] #dizinin başı ile sonunu yer değiştirdi.(array[-1] sondaki elemandır.
-        sorted_array.append(array.pop()) #array.pop() ile sondaki elemanı aldı ve listeye ekledi.
+    for _ in range(len(array)): #kullanmadığı değişkene _ ismini veriyor.(for içinde i kullanımı olmadığı için)
+        array[0] , array[-1] = array[-1] , array[0] #dizinin başı ile sonunu yer değiştirdi.array[-1] sondaki elemandır.
+        sorted_array.append(array.pop()) #array.pop() sayesinde append ile sondaki elemanı aldı ve listeye ekledi.
         min_heapify(array,0)
     return sorted_array
 
